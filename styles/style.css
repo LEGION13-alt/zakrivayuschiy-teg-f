@@ -14,7 +14,204 @@
 
 */
 
+/*header*/
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-end: 100px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
+  text-transform: uppercase;
+  font-family: var(--accent-font), sans-serif;
+}
+
+.header__title-content{
+text-align: center;
+margin:clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0px 25px; /*120 136*/
+font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem); /*14 23*/
+}
+
+.header__logo{
+display: block;
+font-size:clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem); /*49 65*/
+text-align: center;
+margin-bottom: 20px;
+}
+
+.content-section{
+max-inline-size: 700px;
+margin-inline: auto;
+}
+
+.theme-menu__list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-block-end: 25px;
+  line-height: 14px;
+  margin-left: 20px;
+}
+
+/*button*/
+.theme-menu__button{
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+}
+
+.theme-menu__button::after{
+  content: '';
+  display: block;
+  border-bottom: 2px solid var(--accent-color-transparent);
+  transition: var(--transform-time);
+  transform: scale(0);
+  transform-origin: left;
+}
+
+/*disabled*/
+.theme-menu__button:disabled{
+  pointer-events: none;
+  transition: var(--transform-time);
+  color: var(--accent-color-transparent);
+  position: relative;
+}
+
+.theme-menu__button:disabled::before{
+  content: '▶';
+  position: absolute;
+  color: var(--accent-color-transparent);
+  animation: left-right 0.5s ease-in-out infinite reverse;
+  inset-inline-start: -20px;
+}
+@keyframes left-right{
+0%{
+  inset-inline-start: -20px;
+}
+100%{
+  inset-inline-start: -16px;
+}
+}
+
+/*hover*/
+.theme-menu__button:hover{
+transition: var(--transform-time);
+color: var(--accent-color-transparent);
+}
+
+/*focus*/
+.theme-menu__button:focus{
+outline: none;
+}
+
+.theme-menu__button:focus-visible{
+  color: var(--accent-color-transparent);
+}
+
+.theme-menu__button:focus-visible::after{
+  transform: scaleX(1);
+}
+
+/*main*/
+.cards{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card{
+  border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
+}
+
+.section__title{
+  border-bottom: 2px solid var(--accent-color);
+  padding: 4px 10px 6px;
+  font-size: 18px;
+  font-weight: var(--main-font-title);
+}
+
+.card__image-container{
+  border-bottom: 2px solid var(--accent-color);
+  position: relative;
+}
+
+.card__image{
+  display: block;
+  object-fit: cover;
+  object-position: 97%;
+  aspect-ratio: 1/1;
+  inline-size: 100%;
+}
+
+.card__image-label{
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  opacity: 0.5;
+  mix-blend-mode:hard-light;
+  color: var(--accent-color);
+  font-family:var(--accent-font);
+  font-weight: var(--main-font-content);
+  font-size: 14px;
+  text-transform: uppercase;
+  text-shadow: 
+  -1px -1px 0px var(--background-color), 
+  0px 1px 0px var(--background-color), 
+  -1px 1px 0px var(--background-color), 
+  1px 1px 0px var(--background-color), 
+  -1px 0px 0px var(--background-color), 
+  1px -1px 0px var(--background-color), 
+  0px -1px 0 var(--background-color), 
+  1px 0px 0 var(--background-color);
+}
+@supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
+  .card__image-label{
+      -webkit-text-stroke: 1px var(--background-color);
+      text-shadow: none;
+  }
+} 
+
+.card__content{
+display: flex;
+flex-direction: column;
+gap: 25px;
+padding: 25px;
+}
+
+.card__text-container{
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.card__text{
+  font-size: 18px;
+  line-height: 21px;
+  font-variation-settings: var(--main-font-content);
+}
+
+.card__buttons{
+  display: flex;
+  justify-content: flex-end;
+  gap:12px;
+}
+
+
+
 .page {
+  padding: 100px 0px;
+  font-family:var(--main-font), sans-serif;
+  font-variation-settings: var(--main-font-content);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  color: var(--accent-color);
+  background-color: var(--background-color);
+  background-image: var(--gradient-left-to-right),var(--gradient-top-to-bottom),var(--gradient-background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
