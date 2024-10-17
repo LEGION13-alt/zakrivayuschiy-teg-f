@@ -229,6 +229,7 @@
   position: absolute;
   transition: transform 0.5s ease-in-out;
   background-color: var(--accent-color);
+  font-variation-settings:var(--main-font-content);
   transform-origin: left;
   transform: scaleX(0);
   inset: 0%;
