@@ -7,8 +7,8 @@
 
 :root.theme-light {
   /*fonts*/
-  --main-font: 'Inter-Variable';
-  --accent-font: 'PressStart2P-Regular';
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P-Regular";
   --main-font-content: 400;
   --main-font-title: 700;
 
@@ -16,6 +16,11 @@
   --background-color: #ffffff;
   --accent-color: #000000;
   --accent-color-transparent: rgb(0 0 0/ 0.6);
+  --mix-color: #ffffff;
+
+  /*heart-colors*/
+  --sparks-color: red;
+  --heart-act-clr: red;
 
   /*gradient-colors*/
   --line-gradient-1: rgb(211 211 211);
@@ -45,12 +50,15 @@
     var(--bottom-gradient-1) 0.01%,
     var(--bottom-gradient-2)
   );
+
+  /*transform*/
+  --transform-time: 0.3s ease;
 }
 
 :root.theme-dark {
   /*fonts*/
-  --main-font: 'Inter-Variable';
-  --accent-font: 'PressStart2P-Regular';
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P-Regular";
   --main-font-content: 465;
   --main-font-title: 785;
 
@@ -58,6 +66,11 @@
   --background-color: #000000;
   --accent-color: #00cc14;
   --accent-color-transparent: rgb(0 204 20/ 0.6);
+  --mix-color: #00cc14;
+
+  /*heart-colors*/
+  --sparks-color: red;
+  --heart-act-clr: red;
 
   /*gradient-colors*/
   --line-gradient-1: rgb(0 0 0);
@@ -87,13 +100,16 @@
     var(--bottom-gradient-1) 0.01%,
     var(--bottom-gradient-2)
   );
+
+  /*transform*/
+  --transform-time: 0.3s ease;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /*fonts*/
-    --main-font: 'Inter-Variable';
-    --accent-font: 'PressStart2P-Regular';
+    --main-font: "Inter-Variable";
+    --accent-font: "PressStart2P-Regular";
     --main-font-content: 465;
     --main-font-title: 785;
 
@@ -101,34 +117,42 @@
     --background-color: #000000;
     --accent-color: #00cc14;
     --accent-color-transparent: rgb(0 204 20/ 0.6);
+    --mix-color: #00cc14;
 
-   /*gradient-colors*/
-   --line-gradient-1: rgb(0 0 0);
-   --line-gradient-2: rgb(0 0 0/ 0);
-   --bottom-gradient-1: #007f0c;
-   --bottom-gradient-2: #004306;
- 
-   /*gradient-linear*/
-   --gradient-left-to-right: repeating-linear-gradient(
-     to right,
-     var(--line-gradient-1) 1px,
-     var(--line-gradient-1) 2px,
-     var(--line-gradient-2) 3px,
-     var(--line-gradient-2) 4px
-   );
- 
-   --gradient-top-to-bottom: repeating-linear-gradient(
-     to bottom,
-     var(--line-gradient-1) 1px,
-     var(--line-gradient-1) 2px,
-     var(--line-gradient-2) 3px,
-     var(--line-gradient-2) 4px
-   );
- 
-   --gradient-background: linear-gradient(
-     to bottom,
-     var(--bottom-gradient-1) 0.01%,
-     var(--bottom-gradient-2)
-   );
-}
+    /*heart-colors*/
+    --sparks-color: red;
+    --heart-act-clr: red;
+
+    /*gradient-colors*/
+    --line-gradient-1: rgb(0 0 0);
+    --line-gradient-2: rgb(0 0 0/ 0);
+    --bottom-gradient-1: #007f0c;
+    --bottom-gradient-2: #004306;
+
+    /*gradient-linear*/
+    --gradient-left-to-right: repeating-linear-gradient(
+      to right,
+      var(--line-gradient-1) 1px,
+      var(--line-gradient-1) 2px,
+      var(--line-gradient-2) 3px,
+      var(--line-gradient-2) 4px
+    );
+
+    --gradient-top-to-bottom: repeating-linear-gradient(
+      to bottom,
+      var(--line-gradient-1) 1px,
+      var(--line-gradient-1) 2px,
+      var(--line-gradient-2) 3px,
+      var(--line-gradient-2) 4px
+    );
+
+    --gradient-background: linear-gradient(
+      to bottom,
+      var(--bottom-gradient-1) 0.01%,
+      var(--bottom-gradient-2)
+    );
+
+    /*transform*/
+    --transform-time: 0.3s ease;
+  }
 }
