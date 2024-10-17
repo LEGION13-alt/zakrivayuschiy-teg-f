@@ -130,7 +130,7 @@
   border-bottom: 2px solid var(--accent-color);
   padding: 4px 10px 6px;
   font-size: 18px;
-  font-weight: var(--main-font-title);
+  font-variation-settings: var(--main-font-title) 'wdth' 0, 'opsz' 0;
 }
 
 .card__image-container {
@@ -192,7 +192,7 @@
 .card__text {
   font-size: 18px;
   line-height: 21px;
-  font-variation-settings: var(--main-font-content);
+  font-variation-settings: var(--main-font-content) 'wdth' 0, 'opsz' 0;
 }
 
 /*card buttons*/
@@ -229,7 +229,6 @@
   position: absolute;
   transition: transform 0.5s ease-in-out;
   background-color: var(--accent-color);
-  font-variation-settings:var(--main-font-content);
   transform-origin: left;
   transform: scaleX(0);
   inset: 0%;
@@ -529,7 +528,7 @@ dialog::backdrop {
 .page {
   padding: 100px 0px;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: var(--main-font-content);
+  font-variation-settings: var(--main-font-content) 'wdth' 0, 'opsz' 0;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   color: var(--accent-color);
