@@ -91,7 +91,7 @@
   content: "▶";
   position: absolute;
   color: var(--accent-color-transparent);
-  animation: left-right 0.5s ease-in-out infinite reverse;
+  animation: left-right 0.5s ease-in-out alternate infinite;
   inset-inline-start: -20px;
 }
 
@@ -117,8 +117,8 @@
 /*main*/
 .cards {
   display: flex;
-  flex-direction: column;
   gap: 50px;
+  flex-direction: column;
 }
 
 .card {
@@ -130,7 +130,7 @@
   border-bottom: 2px solid var(--accent-color);
   padding: 4px 10px 6px;
   font-size: 18px;
-  font-variation-settings: 'wght' var(--main-font-title), 'wdth' 0, 'opsz' 0;
+  font-variation-settings: "wght" var(--main-font-title), "wdth" 0, "opsz" 0;
 }
 
 .card__image-container {
@@ -147,6 +147,7 @@
 }
 
 .card__image-label {
+  z-index: 2; /*+фильтр*/
   position: absolute;
   inset-block-start: 25px;
   inset-inline-end: clamp(
@@ -192,50 +193,23 @@
 .card__text {
   font-size: 18px;
   line-height: 21px;
-  font-variation-settings: 'wght' var(--main-font-content), 'wdth' 0, 'opsz' 0;
+  font-variation-settings: "wght" var(--main-font-content), "wdth" 0, "opsz" 0;
 }
 
 /*card buttons*/
 .card__buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 6px;
 }
 
 .card__like-button {
   display: flex;
-  background-color: transparent;
   padding: 12.5px 37px;
   height: 36px;
-  cursor: pointer;
-  position: relative;
   inline-size: 130px;
-  border: 2px solid var(--accent-color);
   align-items: center;
   justify-content: center;
-}
-
-.card__like-button:focus {
-  outline: none;
-}
-
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);
-  transition: var(--transform-time);
-}
-
-.card__like-button::before {
-  content: "";
-  position: absolute;
-  transition: transform 0.5s ease-in-out;
-  background-color: var(--accent-color);
-  transform-origin: left;
-  transform: scaleX(0);
-  inset: 0%;
-}
-
-.card__like-button:hover::before {
-  transform: scaleX(1);
 }
 
 .button__text {
@@ -248,163 +222,75 @@
 }
 
 /*icon button*/
+
 .card__icon-button {
-  display: flex;
-  align-items: center;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  inline-size: 39px;
   cursor: pointer;
   position: relative;
+  background-color: transparent;
+  outline: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  inline-size: 39px;
   justify-content: center;
+  border: none;
+  outline-offset: -2px;
 }
 
 .like-icon {
   position: absolute;
 }
 
-.card__icon-button:hover {
-  .core {
-    fill: var(--accent-color);
-    transition: fill 0.3s 0.03s linear;
-  }
-  .main-body {
-    fill: var(--accent-color);
-    transition: fill 0.3s 0.05s linear;
-  }
-}
-
-.card__icon-button:active {
-  .core {
-    fill: var(--heart-act-clr);
-    transition: fill 0.3s 0.03s linear;
-  }
-  .main-body {
-    fill: var(--heart-act-clr);
-    transition: fill 0.3s 0.05s linear;
-  }
-}
-
 .card__icon-button:focus {
-  outline: transparent;
+  outline: none;
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color);
+  outline: 2px solid var(--accent-color);
   transition: var(--transform-time);
 }
 
-/*animation*/
-.like-icon.is-liked {
-  animation: heart-scale 0.3s 0.1s ease-in reverse;
-
-  .core {
-    fill: var(--heart-act-clr);
-    animation: core-red 0.3s 0.03s linear;
-  }
-
-  .main-body {
-    fill: var(--heart-act-clr);
-    animation: main-body-red 0.3s 0.05s linear;
-  }
-
-  .contour {
-    fill: var(--heart-act-clr);
-    animation: contour-red 0.3s 0.06s linear;
-    animation-fill-mode: contour-red 0.1s linear;
-  }
-
-  .sparks {
-    opacity: 0;
-    animation: sparks-red 0.3s 0.3s ease-in reverse;
-  }
-}
-
-/*heart scg*/
-.main-body {
-  fill: transparent;
-  transition: fill 0.3s 0.05s linear;
-}
-
-.core {
-  fill: transparent;
-  transition: fill 0.3s 0.03s linear;
-}
-
-.sparks {
-  opacity: 0;
-}
-
-/*footer*/
-.footer {
+/*save*/
+.save {
   margin-top: 50px;
   max-inline-size: 335px;
   background-color: var(--background-color);
-  outline: 2px solid var(--accent-color);
 }
 
 @media (width <= 375px) {
-  .footer {
+  .save {
     max-inline-size: 306px;
     width: 100%;
   }
 }
 
-.footer__button {
+.save__button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: transparent;
+  justify-content: center;
   gap: 8px;
-  border: none;
   inline-size: 335px;
   padding: 15px 0;
-  cursor: pointer;
-  position: relative;
 }
 
 @media (width <= 375px) {
-  .footer__button {
+  .save__button {
     inline-size: 306px;
     flex-direction: column;
   }
 }
 
-.footer__button:focus {
-  outline: none;
-}
-
-.footer__button:focus-visible {
-  box-shadow: 2px 2px 0 2px var(--accent-color);
-  transition: var(--transform-time);
-}
-
-.footer__button::before {
-  content: "";
-  position: absolute;
-  transition: transform 0.5s ease-in-out;
-  background-color: var(--accent-color);
-  transform-origin: left;
-  transform: scaleX(0);
-  inset: 0%;
-}
-
-.footer__button:hover::before {
-  transform: scaleX(1);
-}
-
-.footer__button-image {
+.save__button-image {
   position: relative;
   block-size: 21px;
-  margin-left: 15px;
   mix-blend-mode: difference;
   color: var(--mix-color);
   transition: var(--transform-time);
 }
 
 @media (width <= 375px) {
-  .footer__button-image {
+  .save__button-image {
     block-size: 28px;
     margin: 0;
   }
@@ -450,21 +336,27 @@ dialog::backdrop {
   grid-row: 2;
   padding: 12px 0px;
   border: 2px solid var(--accent-color);
-  background-color: transparent;
   text-transform: uppercase;
-  cursor: pointer;
 }
 
-.dialog__button:focus {
+/*стилизация like,save,ok*/
+.button {
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+}
+
+.button:focus {
   outline: none;
 }
 
-.dialog__button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
   transition: var(--transform-time);
 }
 
-.dialog__button::before {
+.button::before {
   content: "";
   position: absolute;
   transition: transform 0.5s ease-in-out;
@@ -474,9 +366,10 @@ dialog::backdrop {
   inset: 0%;
 }
 
-.dialog__button:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
+/**/
 
 .dialog__text {
   line-height: 21px;
@@ -528,7 +421,7 @@ dialog::backdrop {
 .page {
   padding: 100px 0px;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--main-font-content), 'wdth' 0, 'opsz' 0;
+  font-variation-settings: "wght" var(--main-font-content), "wdth" 0, "opsz" 0;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   color: var(--accent-color);

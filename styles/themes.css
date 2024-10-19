@@ -8,7 +8,7 @@
 :root.theme-light {
   /*fonts*/
   --main-font: "Inter-Variable";
-  --accent-font: "PressStart2P-Regular";
+  --accent-font: "PressStart2P";
   --main-font-content: 400;
   --main-font-title: 700;
 
@@ -23,26 +23,24 @@
   --heart-act-clr: red;
 
   /*gradient-colors*/
-  --line-gradient-1: rgb(211 211 211);
-  --line-gradient-2: rgb(211 211 211/ 0);
+  --line-gradient-1: #d3d3d3;
+  --line-gradient-2: #d3d3d300;
   --bottom-gradient-1: #e7e7e7;
   --bottom-gradient-2: #1a1a1a;
 
   /*gradient-linear*/
   --gradient-left-to-right: repeating-linear-gradient(
     to right,
-    var(--line-gradient-1) 1px,
-    var(--line-gradient-1) 2px,
-    var(--line-gradient-2) 3px,
-    var(--line-gradient-2) 4px
+    var(--line-gradient-2) 0px,
+    var(--line-gradient-1) 1px 2px,
+    var(--line-gradient-2) 3px 4px
   );
 
   --gradient-top-to-bottom: repeating-linear-gradient(
     to bottom,
-    var(--line-gradient-1) 1px,
-    var(--line-gradient-1) 2px,
-    var(--line-gradient-2) 3px,
-    var(--line-gradient-2) 4px
+    var(--line-gradient-2) 0px,
+    var(--line-gradient-1) 1px 2px,
+    var(--line-gradient-2) 3px 4px
   );
 
   --gradient-background: linear-gradient(
@@ -58,7 +56,7 @@
 :root.theme-dark {
   /*fonts*/
   --main-font: "Inter-Variable";
-  --accent-font: "PressStart2P-Regular";
+  --accent-font: "PressStart2P";
   --main-font-content: 465;
   --main-font-title: 785;
 
@@ -73,31 +71,29 @@
   --heart-act-clr: red;
 
   /*gradient-colors*/
-  --line-gradient-1: rgb(0 0 0);
-  --line-gradient-2: rgb(0 0 0/ 0);
+  --line-gradient-1: #000;
+  --line-gradient-2: #00000000;
   --bottom-gradient-1: #007f0c;
   --bottom-gradient-2: #004306;
 
   /*gradient-linear*/
   --gradient-left-to-right: repeating-linear-gradient(
     to right,
-    var(--line-gradient-1) 1px,
-    var(--line-gradient-1) 2px,
-    var(--line-gradient-2) 3px,
-    var(--line-gradient-2) 4px
+    var(--line-gradient-2) 0px,
+    var(--line-gradient-1) 1px 2px,
+    var(--line-gradient-2) 3px 4px
   );
 
   --gradient-top-to-bottom: repeating-linear-gradient(
     to bottom,
-    var(--line-gradient-1) 1px,
-    var(--line-gradient-1) 2px,
-    var(--line-gradient-2) 3px,
-    var(--line-gradient-2) 4px
+    var(--line-gradient-2) 0px,
+    var(--line-gradient-1) 1px 2px,
+    var(--line-gradient-2) 3px 4px
   );
 
   --gradient-background: linear-gradient(
     to bottom,
-    var(--bottom-gradient-1) 0.01%,
+    var(--bottom-gradient-1),
     var(--bottom-gradient-2)
   );
 
@@ -109,7 +105,7 @@
   :root {
     /*fonts*/
     --main-font: "Inter-Variable";
-    --accent-font: "PressStart2P-Regular";
+    --accent-font: "PressStart2P";
     --main-font-content: 465;
     --main-font-title: 785;
 
@@ -124,31 +120,29 @@
     --heart-act-clr: red;
 
     /*gradient-colors*/
-    --line-gradient-1: rgb(0 0 0);
-    --line-gradient-2: rgb(0 0 0/ 0);
+    --line-gradient-1: #000;
+    --line-gradient-2: #00000000;
     --bottom-gradient-1: #007f0c;
     --bottom-gradient-2: #004306;
 
     /*gradient-linear*/
     --gradient-left-to-right: repeating-linear-gradient(
       to right,
-      var(--line-gradient-1) 1px,
-      var(--line-gradient-1) 2px,
-      var(--line-gradient-2) 3px,
-      var(--line-gradient-2) 4px
+      var(--line-gradient-2) 0px,
+      var(--line-gradient-1) 1px 2px,
+      var(--line-gradient-2) 3px 4px
     );
 
     --gradient-top-to-bottom: repeating-linear-gradient(
       to bottom,
-      var(--line-gradient-1) 1px,
-      var(--line-gradient-1) 2px,
-      var(--line-gradient-2) 3px,
-      var(--line-gradient-2) 4px
+      var(--line-gradient-2) 0px,
+      var(--line-gradient-1) 1px 2px,
+      var(--line-gradient-2) 3px 4px
     );
 
     --gradient-background: linear-gradient(
       to bottom,
-      var(--bottom-gradient-1) 0.01%,
+      var(--bottom-gradient-1),
       var(--bottom-gradient-2)
     );
 

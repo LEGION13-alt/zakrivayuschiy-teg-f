@@ -19,7 +19,7 @@
   <body class="page">
     <header class="header content-section">
       <h1 class="header__title-content">
-        <span class="header__logo" aria-hidden="true">&lt;/html&gt;</span
+        <span class="header__logo">&lt;/html&gt;</span
         >Закрывающий тег
       </h1>
       <nav class="theme-menu header__theme-menu">
@@ -76,7 +76,7 @@
               </p>
             </div>
             <div class="card__buttons">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Мне нравится">
                 <svg
                   class="like-icon"
                   width="39"
@@ -109,7 +109,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button">
+              <button class="card__like-button button" type="button" aria-label="Мне нравится">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -143,7 +143,7 @@
               </p>
             </div>
             <div class="card__buttons">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Мне нравится">
                 <svg
                   class="like-icon"
                   width="39"
@@ -176,7 +176,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button">
+              <button class="card__like-button button" type="button" aria-label="Мне нравится">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -206,7 +206,7 @@
               </p>
             </div>
             <div class="card__buttons">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Мне нравится">
                 <svg
                   class="like-icon"
                   width="39"
@@ -239,7 +239,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button">
+              <button class="card__like-button button" type="button" aria-label="Мне нравится">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -271,7 +271,7 @@
               </p>
             </div>
             <div class="card__buttons">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Мне нравится">
                 <svg
                   class="like-icon"
                   width="39"
@@ -304,7 +304,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button">
+              <button class="card__like-button button" type="button" aria-label="Мне нравится">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -340,7 +340,7 @@
               </p>
             </div>
             <div class="card__buttons">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Мне нравится">
                 <svg
                   class="like-icon"
                   width="39"
@@ -373,7 +373,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button">
+              <button class="card__like-button button" type="button" aria-label="Мне нравится">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -404,7 +404,7 @@
               </p>
             </div>
             <div class="card__buttons">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Мне нравится">
                 <svg
                   class="like-icon"
                   width="39"
@@ -437,7 +437,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button">
+              <button class="card__like-button button" type="button" aria-label="Мне нравится">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -467,7 +467,7 @@
               <p class="card__text">«Неплохо. Еще не всё потеряно».</p>
             </div>
             <div class="card__buttons">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Мне нравится">
                 <svg
                   class="like-icon"
                   width="39"
@@ -500,7 +500,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button">
+              <button class="card__like-button button" type="button" aria-label="Мне нравится">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -536,7 +536,7 @@
               </p>
             </div>
             <div class="card__buttons">
-              <button class="card__icon-button">
+              <button class="card__icon-button" type="button" aria-label="Мне нравится">
                 <svg
                   class="like-icon"
                   width="39"
@@ -569,39 +569,40 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button">
+              <button class="card__like-button button" type="button" aria-label="Мне нравится">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </div>
         </article>
       </section>
-    </main>
-    <footer class="footer content-section">
-      <button
-        class="footer__button"
-        type="button"
-        onclick="window['dialog'].showModal()"
-        aria-controls="dialog"
-      >
-        <svg class="footer__button-image" viewBox="0 0 40 40">
-          <use href="svg/floppy.svg#floppy" />
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </footer>
 
-    <dialog class="dialog" id="dialog">
-      <form class="dialog__form" method="dialog">
-        <svg class="dialog__image" viewBox="0 0 40 40">
-          <use href="svg/floppy.svg#floppy" />
-        </svg>
-        <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
-        <button class="dialog__button" type="submit">
-          <span class="button__text">ок</span>
+      <section class="save content-section">
+        <button
+          class="save__button button"
+          type="button"
+          onclick="window['dialog'].showModal()"
+          aria-controls="dialog"
+        >
+          <svg class="save__button-image" viewBox="0 0 40 40">
+            <use href="svg/floppy.svg#floppy" />
+          </svg>
+          <span class="button__text">Сохранить на память</span>
         </button>
-      </form>
-    </dialog>
+      </section>
+  
+      <dialog class="dialog" id="dialog">
+        <form class="dialog__form" method="dialog">
+          <svg class="dialog__image" viewBox="0 0 40 40">
+            <use href="svg/floppy.svg#floppy" />
+          </svg>
+          <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+          <button class="dialog__button button" type="submit" aria-label="Закрыть">
+            <span class="button__text">ок</span>
+          </button>
+        </form>
+      </dialog>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
